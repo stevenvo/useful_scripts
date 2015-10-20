@@ -24,15 +24,6 @@ file_path = DROPBOX_PUBLIC_IMAGE_FOLDER + "/" + unique_filename
 
 out, error = cmdline("{cmd} {filename}".format(cmd=PNGPASTE_CMD, filename=file_path))
 
-# cmdline("terminal-notifier -title \"Clipboard Image 2 Dropbox\"  -message \"Error: {msg}\"".format(msg = out))
-
-# print "out: {0}, {1}".format(output, error)
-
-# if len(out) > 0:
-#     cmdline("terminal-notifier -title \"Clipboard Image 2 Dropbox\"  -message \"Error: {msg}\"".format(msg = out))
-# else:
-#     cmdline("terminal-notifier -title \"Clipboard Image 2 Dropbox\"  -message \"DONE!\"")
-
 # Generate Dropbox URL
 direct_link = DROPBOX_PUBLIC_URL + unique_filename
 os.system("echo '![]({url})' | pbcopy".format(url=direct_link.strip()))
